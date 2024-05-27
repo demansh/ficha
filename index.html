@@ -179,7 +179,8 @@
 
         function assignSubmitButtonListener(submitButton, activeInputs) {
             submitButton.addEventListener('click', () => {
-                window.location.reload();
+                initGameSate();
+                nextStep();
             });
         }
 
