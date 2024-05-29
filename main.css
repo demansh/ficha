@@ -1,0 +1,96 @@
+html {
+    overflow-y: hidden;
+}
+
+.win {
+    font-size: 24px;
+    color: #116D6E;
+}
+
+.lose {
+    font-size: 24px;
+    color: #FF5252;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: 100vh;
+    gap: 20px;
+    padding-top: 20px;
+}
+
+.input-container {
+    display: flex;
+    gap: 10px;
+}
+
+.input-box {
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    font-size: 24px;
+    border-radius: 5px;
+    caret-color: transparent;
+    text-transform: uppercase;
+}
+
+.active-box {
+    border: 1px solid #212121;
+}
+
+.inactive-box {
+    pointer-events: none;
+}
+
+.wrong-guess {
+    background-color: #757575;
+    border: 1px solid #757575;
+    color: white;
+}
+
+.part-guess {
+    background-color: white;
+    border: 1px solid #757575;
+}
+
+.before-guess {
+    border: 1px solid #BDBDBD;
+}
+
+.full-guess {
+    background-color: #ED7D31;
+    border: 1px solid #ED7D31;
+}
+
+.submit-button {
+    background-color: #1D267D;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 16px 30px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.submit-button:hover {
+    background-color: #5C469C;
+}
+
+@media (max-width: 600px) {
+    .input-box {
+        width: 50px;
+        height: 50px;
+        font-size: 28px;
+    }
+
+    .input-container {
+        gap: 5px;
+    }
+
+    .container {
+        gap: 10px;
+    }
+}
