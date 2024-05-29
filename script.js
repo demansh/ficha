@@ -3,6 +3,9 @@ function isInvalid(guess) {
     if (guess.includes('')) {
         return true;
     }
+    if (!dictionary.includes(guess.join(""))) {
+        return true;
+    }
     return false;
 }
 // Validators section end
@@ -83,6 +86,7 @@ function processInputs(activeInputs) {
         guess.push(e.value);
     });
     if (isInvalid(guess)) {
+        shake(activeInputs);
         return;
     }
     if (guess.toString() === gameState.hiddenWord.toString()) {
@@ -222,6 +226,15 @@ function createSubmitButton() {
     node.setAttribute("id", "submit-button");
     node.innerHTML = "Еще раз";
     return node;
+}
+
+function shake(elements) {
+    elements.forEach(e => {
+        e.classList.add('shake');
+        setTimeout(() => {
+            e.classList.remove('shake');
+        }, 500);
+    });
 }
 // Drawing region END
 
