@@ -79,11 +79,27 @@ html {
     background-color: #5C469C;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 600pt) {
     .input-box {
-        width: 50px;
-        height: 50px;
-        font-size: 28px;
+        width: 40pt;
+        height: 40pt;
+        font-size: 28pt;
+    }
+
+    .input-container {
+        gap: 5px;
+    }
+
+    .container {
+        gap: 10px;
+    }
+}
+
+@media (max-width: 350pt) {
+    .input-box {
+        width: 35pt;
+        height: 35pt;
+        font-size: 28pt;
     }
 
     .input-container {
